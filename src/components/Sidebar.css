@@ -1,0 +1,75 @@
+/* Sidebar Styles */
+.sidebar {
+    background: rgba(0, 123, 255, 0.8); /* Прозрачный синий фон */
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar:hover {
+    background: rgba(0, 123, 255, 0.9); /* Немного меньше прозрачности при наведении */
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-list li {
+    margin: 1rem 0;
+}
+
+.sidebar-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar-list a:hover {
+    color: #cce7ff; /* Светлый синий при наведении */
+}
+
+/* Toggle Sidebar Button */
+.toggle-sidebar-btn {
+    position: fixed;
+    top: 880px; /* Расположение кнопки */
+    left: 20px;
+    background: rgba(0, 123, 255, 0.8); /* Прозрачный синий фон */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.toggle-sidebar-btn:hover {
+    background: rgba(0, 123, 255, 0.9); /* Немного меньше прозрачности при наведении */
+}

@@ -1,0 +1,180 @@
+/* Основной стиль Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Левая часть: логотип и название */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem; /* Расстояние между логотипом и названием */
+}
+
+.navbar-logo {
+  width: 70px;
+  height: 40px;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Центральная часть: ссылки */
+.navbar-center {
+  display: flex;
+  gap: 2rem; /* Расстояние между ссылками */
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #cce7ff;
+}
+
+/* Правая часть: кнопки */
+.navbar-right {
+  display: flex;
+  gap: 1rem; /* Расстояние между кнопками */
+}
+
+.navbar-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap;
+      padding: 1rem;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 0.5rem;
+  }
+
+  .navbar-title {
+      font-size: 1.2rem;
+  }
+
+  .navbar-center {
+      order: 2; /* Центральная часть должна быть между */
+  }
+
+  .navbar-left {
+      order: 1;
+  }
+
+  .navbar-right {
+      order: 3;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.checkbox-form{
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  height: 25px;
+}
+.remember-me{
+  width: 300px;
+}
+/* Иконка пользователя */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Выпадающее меню */
+.dropdown-menu {
+  position: absolute;
+  right: 1rem;
+  top: 70px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+
+.dropdown-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown-link:hover {
+  background-color: #f1f1f1;
+}

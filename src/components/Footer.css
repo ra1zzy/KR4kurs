@@ -1,0 +1,50 @@
+/* Footer.css */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15rem;  /* Добавлено пространство между секциями */
+    background-color: #003366;
+    color: #fff;
+    padding: 0.8rem 0;
+    margin-top: 1.5rem;
+    border-top: 2px solid #ffffff;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .footer-section p {
+    margin-bottom: 0.5rem;
+    line-height: 1;  /* Уменьшено расстояние между строками */
+    font-size: 0.8rem;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;  /* Уменьшено расстояние между строками для ссылок */
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Мобильная адаптивность */
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  
